@@ -16,7 +16,6 @@ create table registered_supporters (
 INSERT INTO registered_supporters (
     first_name,
     last_name,
-    mid_name,
     address,
     city,
     state_province,
@@ -113,3 +112,125 @@ INSERT INTO registered_supporters (
                   to_date('1966-8-10', 'YYYY-MM-DD'),
                   '303-267-4517'
                 );
+                INSERT INTO registered_supporters (
+                    first_name,
+                    last_name,
+                    address,
+                    city,
+                    state_province,
+                    zip_code,
+                    country,
+                    email,
+                    date_of_birth,
+                    phone_number
+                  )
+                    VALUES (
+                      'Ivan',
+                      'Tamayo',
+                      '4510 Fillmore St.',
+                      'Denver',
+                      'Colorado',
+                      '80216',
+                      'USA',
+                      'itamayo@gmail.com',
+                      to_date('1976-12-05', 'YYYY-MM-DD'),
+                      '720-413-5674'
+                    );
+
+                    INSERT INTO registered_supporters (
+                        first_name,
+                        last_name,
+                        address,
+                        city,
+                        state_province,
+                        zip_code,
+                        country,
+                        email,
+                        date_of_birth,
+                        phone_number
+                      )
+                        VALUES (
+                          'Miguel',
+                          'Savala',
+                          '2356 York St.',
+                          'Denver',
+                          'Colorado',
+                          '80213',
+                          'USA',
+                          'savalaM@gmail.com',
+                          to_date('1980-09-17', 'YYYY-MM-DD'),
+                          '303-2483-5623'
+                        );
+                        INSERT INTO registered_supporters (
+                            first_name,
+                            last_name,
+                            address,
+                            city,
+                            state_province,
+                            zip_code,
+                            country,
+                            email,
+                            date_of_birth,
+                            phone_number
+                          )
+                            VALUES (
+                              'Consuelo',
+                              'Aguilar',
+                              '14523 Sheridan Blvd.',
+                              'Lakewood',
+                              'Colorado',
+                              '80202',
+                              'USA',
+                              'sChela123M@gmail.com',
+                              to_date('1979-05-21', 'YYYY-MM-DD'),
+                              '303-298-8620'
+                            );
+                            INSERT INTO registered_supporters (
+                                first_name,
+                                last_name,
+                                address,
+                                city,
+                                state_province,
+                                zip_code,
+                                country,
+                                email,
+                                date_of_birth,
+                                phone_number
+                              )
+                                VALUES (
+                                  'Tomas',
+                                  'Lucero',
+                                  '2456 Logan St.',
+                                  'Denver',
+                                  'Colorado',
+                                  '80245',
+                                  'USA',
+                                  'lucerotomM@gmail.com',
+                                  to_date('1971-02-17', 'YYYY-MM-DD'),
+                                  '720-962-8421'
+                                );
+
+                                INSERT INTO registered_supporters (
+                                    first_name,
+                                    last_name,
+                                    address,
+                                    city,
+                                    state_province,
+                                    zip_code,
+                                    country,
+                                    email,
+                                    date_of_birth,
+                                    phone_number
+                                  )
+                                    VALUES (
+                                      'Meagan',
+                                      'Hernandez',
+                                      '17634 Sierra Dr.',
+                                      'Denver',
+                                      'Colorado',
+                                      '80207',
+                                      'USA',
+                                      'tupacheM@hotmail.com',
+                                      to_date('1988-08-26', 'YYYY-MM-DD'),
+                                      '303-539-4890'
+                                    );
