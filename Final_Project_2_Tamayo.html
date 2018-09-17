@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Final Project</title>
+  </head>
+
+
+
+
+    <body>
+
+      <h1>Be Part of our Contact List!! </h1>
+
+      <p>We'd love to hear from you. Contact us by filling out the form below.
+        Please type in your name and e-mail address to be sure your feedback will be sent.
+        Please use this form for booking or information purposes as well, Thanks!
+      </p>
+
+            <h3>Folow us in:</h3>
+            <ol>
+              <li><a href="https://www.facebook.com/CIKATRIZ-124411568772/?ref=bookmarks">Facebook.</a></li>
+              <li><a href="https://soundcloud.com/cikatriz">Sound Cloud.</a></li>
+
+            </ol>
+
+
+
+<form name="registration" action=" " method="post">
+
+                  <table>
+                  <tr>
+                  <td>First Name: </td>
+                  <td><input type = "text" name = "t1" id = "t1" ></td>
+                  </tr>
+
+                  <tr>
+                  <td>Last Name: </td>
+                  <td><input type = "text" name = "t2" id = "t2" ></td>
+                  </tr>
+
+                  <tr>
+                  <td>Address: </td>
+                  <td><input type = "text" name = "t3" id = "t3" ></td>
+                  </tr>
+
+                  <tr>
+                  <td>City: </td>
+                  <td><input type = "text" name = "t4" id = "t4" ></td>
+                  </tr>
+
+                  <tr>
+                  <td>State/Province: </td>
+                  <td><input type = "text" name = "t5" id = "t5" ></td>
+                  </tr>
+
+                  <tr>
+                  <td>Zip Code: </td>
+                  <td><input type = "text" name = "t6" id = "t6" ></td>
+                  </tr>
+
+
+                  <tr>
+                  <td>Country: </td>
+                  <td><input type = "text" name = "t7" id = "t7" ></td>
+                  </tr>
+
+                  <tr>
+                  <td>E-Mail: </td>
+                  <td><input type = "text" name = "t8" id = "t8" ></td>
+                  </tr>
+
+                  <tr>
+                  <td>Date Of Birth: </td>
+                  <td><input type = "date" name = "t9" id = "t9" ></td>
+                  </tr>
+
+
+                  <tr>
+                  <td>Phone #: </td>
+                  <td><input type = "text" name = "t10" id = "t10" ></td>
+                  </tr>
+
+              </tr>
+
+              <tr>
+              <td><input type="button" name="submit" value="Submit" onClick = "sub();"/></td>
+              </tr>
+
+
+                </table>
+
+              </form>
+
+
+</div>
+<h4>
+<p> Tell us what you think! Reach us at: <a href="mailto:cikatrizmusic@gmail.com">cikatrizmusic@gmail.com </a></p>
+</h4>
+  </body>
+
+</html>
+
+
+<!--Connection to Database-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
+
+
+<!-- <script language='javascript'>
+  function flickerResults(myData){
+
+  }
+
+</script> -->
+
+
+<script>
+
+$.ajax({
+  url: "http://localhost:4001/registered_supporters/0",
+  method: 'GET',
+  dataType: 'json',
+  success: function(result) {
+    console.log(result);
+
+
+  },
+  error: function() {
+    console.log("Something is wrong!");
+
+  }
+});
+
+function sub(){
+
+
+  $.ajax({
+    url: "http://localhost:4001/registered_supporters/0",
+    method: 'POST',
+    dataType: 'json',
+    success: function(result) {
+      console.log(result);
+
+       $.query = "Insert into registered_supporters (first_name, last_name, address, city, state_province, zip_code, country, email, date_of_birth, phone_number) VALUES ('$_POST[t1]','$_POST[t2]','$_POST[t3]','$_POST[t4]','$_POST[t5]','$_POST[t6]','$_POST[t7]','$_POST[t8]','$_POST[t9]','$_POST[t10]')";
+}
+
+//$query = "Insert into registered_supporters VALUES ('$_POST[t1]','$_POST[t2]','$_POST[t3]','$_POST[t4]','$_POST[t5]','$_POST[t6]','$_POST[t7]','$_POST[t8]','$_POST[t9]','$_POST[t10]')";
+//// if ($result === false){
+//     echo "<div>Problem inserting database record.  Error was " . pg_last_error() ."</div>";
+// } else {
+//     echo "<div>Database Record inserted correctly</div>";
+// }
+// //don't really need this
+//pg_close($dbconn);
+})
+}
+
+
+
+
+
+
+
+</script>
+
+<script>
+
+
+
+</script>
